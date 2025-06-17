@@ -1,77 +1,199 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# <span style="color: #FF6B9D;">ChurnTrailblazers</span>
 
-## Template Instructions
+**<span style="color: #C77DFF;">Where Women meet Data mAgic</span>**
+_<span style="color: #7209B7;">Breaking barriers, predicting churn, shaping future</span>_
 
-Welcome,
+This project builds an end-to-end machine learning system to predict customer churn and deliver personalized retention strategies. Using comprehensive data analysis across demographics, financial behavior, and account patterns, the system identifies at-risk customers through four analytical notebooks covering ETL, descriptive statistics, correlations, and segmentation. An interactive Streamlit application provides real-time churn predictions and matches customers to personas like "Stressed Sarah" for targeted retention solutions including personalized outreach, payment plans, and financial wellness resources. The platform combines predictive analytics with design thinking to proactively reduce churn and maximize customer lifetime value.
 
-This is the Code Institute student template for the Data Analytics capstone project. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)(CELIA)
 
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
+## Dataset Information
 
-## How to use this repo
+**Source:** Kaggle Credit Card Customer Churn Dataset
+**Total Columns:** 23 (analyzing 21 columns)
+**Target Variable:** Attrition_Flag (whether customer churned or not)
 
-1. Use this template to create your GitHub project repo. Click the Use this template button, then click Create a new repository.
+### Column Descriptions
 
-1. Copy the URL of your repository to your clipboard.
+| Column                       | Description                                                  |
+| ---------------------------- | ------------------------------------------------------------ |
+| **CLIENTNUM**                | Unique customer ID number                                    |
+| **Attrition_Flag**           | Whether customer left the service (TARGET VARIABLE)          |
+| **Customer_Age**             | Age of the customer in years                                 |
+| **Gender**                   | Male or Female                                               |
+| **Dependent_count**          | Number of dependents (family members)                        |
+| **Education_Level**          | Customer's education level                                   |
+| **Marital_Status**           | Single, Married, or Divorced                                 |
+| **Income_Category**          | Annual income range category                                 |
+| **Card_Category**            | Type of credit card (Blue, Silver, Gold, Platinum)           |
+| **Months_on_book**           | How long customer has been with the company                  |
+| **Total_Relationship_Count** | Number of products customer has with the company             |
+| **Months_Inactive_12_mon**   | Number of months customer was inactive in last 12 months     |
+| **Contacts_Count_12_mon**    | Number of times customer contacted company in last 12 months |
+| **Credit_Limit**             | Maximum credit limit allowed                                 |
+| **Total_Revolving_Bal**      | Outstanding balance on the card                              |
+| **Avg_Open_To_Buy**          | Average available credit remaining                           |
+| **Total_Amt_Chng_Q4_Q1**     | Change in transaction amount from Q4 to Q1                   |
+| **Total_Trans_Amt**          | Total transaction amount in last 12 months                   |
+| **Total_Trans_Ct**           | Total transaction count in last 12 months                    |
+| **Total_Ct_Chng_Q4_Q1**      | Change in transaction count from Q4 to Q1                    |
+| **Avg_Utilization_Ratio**    | How much of credit limit is being used                       |
 
-1. In VS Code, select File - Open Folder.
+### Analysis Plan
 
-1. Select your vscode-projects folder, then click the Select Folder button on Windows, or Open button on Mac.
+**Notebook 1 - ETL Pipeline:**
 
-1. From the top menu in VS Code, select Terminal > New Terminal to open the terminal.
+- All 21 columns for data cleaning and preprocessing
 
-1. In the terminal, type git clone followed by the URL of your GitHub repository. Then hit Enter. This command will download all the files in your GitHub repository into your vscode-projects folder.
+**Notebook 2 - Descriptive Statistics:**
 
-1. In VS Code, select File > Open Folder again.
+- Demographics: `Customer_Age`, `Gender`, `Education_Level`, `Marital_Status`, `Income_Category`
+- Account Info: `Card_Category`, `Months_on_book`, `Credit_Limit`
 
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click Select Folder.
+**Notebook 3 - Correlation Analysis:**
 
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate from each other. You need to create your virtual environment, also called a venv, and then ensure that it is activated any time you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select Command Palette to open the VS Code command palette.
+- Financial: `Credit_Limit`, `Total_Revolving_Bal`, `Avg_Utilization_Ratio`, `Total_Trans_Amt`
+- Behavioral: `Months_Inactive_12_mon`, `Contacts_Count_12_mon`, `Total_Trans_Ct`
 
-1. In the command palette, type: create environment and select Python: Create Environment…
+**Notebook 4 - Segmentation Analysis:**
 
-1. Choose Venv from the dropdown list.
+- Key Segments: `Income_Category`, `Card_Category`, `Customer_Age`, `Total_Relationship_Count`
+- Risk Factors: `Avg_Utilization_Ratio`, `Months_Inactive_12_mon`, `Total_Revolving_Bal`
 
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
+**Streamlit App - Interactive Churn Prediction & Solutions:**
 
-1. DO NOT click the box next to requirements.txt, as you need to do more steps before you can install your dependencies. Click OK.
+- **Model Testing:** Real-time churn prediction using all relevant features
+- **Persona-Based Solutions:** Design thinking approach with customer personas
+- **Interactive Dashboard:** Input customer data and get personalized retention strategies
 
-1. You will see a .venv folder appear in the file explorer pane to show that the virtual environment has been created.
+## Streamlit App Features
 
-1. Important: Please add the .venv to your .gitignore file
+### Churn Prediction Interface
 
-1. Return to the terminal by clicking on the TERMINAL tab or click on the Terminal menu and choose New Terminal if no terminal is currently open.
+`````python
 
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
- `pip3 install -r requirements.txt`
+# Key input fields for prediction
+- Customer_Age (slider)
+- Income_Category (selectbox)
+- Card_Category (selectbox)
+- Months_Inactive_12_mon (slider)
+- Avg_Utilization_Ratio (slider)
+- Total_Trans_Amt (number_input)
+- Credit_Limit (number_input)
 
-1. Open the jupyter_notebooks directory, and click on the notebook you want to open.
+Streamlit App Tabs:
+├── :dart: Churn Predictor (main prediction interface)
+├── :silhouettes: Customer Personas (design thinking profiles)
+├── :bulb: Retention Solutions (persona-based strategies)
+└── :bar_chart: Model Performance (accuracy metrics)
 
-1. Click the kernel button and choose Python Environments.
+### Sample output
+Prediction: 85% Churn Risk :warning:
+Customer Persona: "Stressed Sarah"
+Recommended Action:
+- Immediate personal call within 24 hours
+- Offer payment plan restructuring
+- Provide financial wellness resources
+- Consider credit limit review
 
-Note that the kernel says Python 3.12.2 as it inherits from the workspace, so it will be Python-3.12.2 as installed by our template. To confirm this, you can use `! python --version` in a notebook code cell.
+## Business Requirements()(Celia)
+- Describe your business requirements
 
-## Cloud IDE Reminders
+## Hypothesis and how to validate?()(Celia)
+- List here your project hypothesis(es) and how you envision validating it (them)
 
-To log into the Heroku toolbelt CLI:
+## Project Plan(Celia)
+- Outline the high-level steps taken for the analysis.
+- How was the data managed throughout the collection, processing, analysis and interpretation steps?
+- Why did you choose the research methodologies you used?
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## The rationale to map the business requirements to the Data Visualisations(Kabira)
+- List your business requirements and a rationale to map them to the Data Visualisations
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Analysis techniques used(Angel)
+- List the data analysis methods used and explain limitations or alternative approaches.
+- How did you structure the data analysis techniques. Justify your response.
+- Did the data limit you, and did you use an alternative approach to meet these challenges?
+- How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 
-* Set the runtime.txt Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+## Ethical considerations(Celia)
+- Were there any data privacy, bias or fairness issues with the data?
+- How did you overcome any legal or societal issues?
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+## Dashboard Design(Kabira's SEction)
 
-## Dashboard Design
+- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
+- Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
+- How were data insights communicated to technical and non-technical audiences?
+- Explain how the dashboard was designed to communicate complex data insights to different audiences.
+
+## Development Roadmap(Celia)
+- What challenges did you face, and what strategies were used to overcome these challenges?
+- What new skills or tools do you plan to learn next based on your project experience?
+
+## Known Issues & Solutions(Angel,Celia,Kabira)
+
+### Issue 1: PyArrow Dependency Installation Error
+**Problem:** Installation failed when running `pip install -r requirements.txt` with PyArrow dependency errors, even though PyArrow not directly listed in requirements.txt. The error occurred because PyArrow is an internal dependency of pandas and Streamlit packages, causing pip to automatically attempt installation during setup.
+**Root Cause:** PyArrow gets pulled in automatically as a transitive dependency from pandas and Streamlit, making it a "hidden dependency" that can cause installation issues on certain machine configurations.
+**Solution:**
+```bash
+pip install --only-binary=pyarrow pyarrow
+Then proceed with the normal requirements installation:
+Date Resolved: [16/06/2025]
+Key Learning: Hidden/transitive dependencies can affect package installation even when not explicitly listed in requirements.txt. The --only-binary flag forces pip to use pre-compiled binary packages instead of building from source, which resolves compatibility issues on problematic machine configurations.
+
+### Issue 2: Git Repository Conflict from Cloning Template Repository
+**Problem:** Cloned a data template repository inside the group project folder, which created two separate Git repositories with conflicting .git folders. This prevented committing changes to the main group project repository, as Git couldn't determine which repository to use for version control.
+**Root Cause:** Having multiple .git folders in the same project directory creates Git conflicts, as each .git folder represents a separate repository with its own commit history and remote origin.
+**Solution:**
+1. Delete the cloned template repository folder completely
+2. Copy-paste only the needed template files into the main group repository
+3. Use normal Git workflow: `git add` → `git commit` → `git push`
+**Date Resolved:** [Add the date when you fixed this]
+**Key Learning:**
+- **Golden Rule:** Only one .git folder per project
+- Clone only the main group repository
+- For templates or external files → copy-paste manually, don't clone
+- Multiple Git repositories in the same folder cause version control conflicts
+# Main Data Analysis Libraries(Angel,Kabira)
+## Core Data Processing
+- pandas
+- NumPy
+## Data Visualization
+- matplotlib
+- seaborn
+- plotly
+## Machine Learning
+- scikit-learn
+## Interactive Dashboard
+- streamlit
+
+## Conclusions (Celia,Angel,Kabira)
+Key findings
+
+## Credits(Celia,Angel,Kabira)
+
+* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
+* You can break the credits section up into Content and Media, depending on what you have included in your project.
+
+### Content(Angel,Kabira,Celia)
+- The text for the Home page was taken from Wikipedia Article A
+- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
+- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+
+### Media(Angel, Kabira)
+- The photos used on the home and sign-up page are from This Open-Source site
+- The images used for the gallery page were taken from this other open-source site
+
+## Acknowledgements (Angel, Celia, Kabira)
+* Thank the people who provided support through this project.
+
+## ChurnTrailblazers Team! (Celia,Angel,Kabira)
+Team members section (roles)
+```` (edited)
+
+Font AwesomeFont Awesome
+Font Awesome
+The internet's icon library + toolkit. Used by millions of designers, devs, & content creators. Open-source. Always free. Always awesome.
+`````
