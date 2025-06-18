@@ -3,7 +3,7 @@
 **<span style="color: #C77DFF;">Where Women meet Data mAgic</span>**
 _<span style="color: #7209B7;">Breaking barriers, predicting churn, shaping future</span>_
 
-This project aims to develop an end-to-end machine learning solution to predict customer churn in the financial services sector. By leveraging historical customer data—including demographics, transaction behavior, and credit usage—the system identifies customers who are at risk of leaving. The project begins with a robust ETL pipeline that cleans, preprocesses, and encodes the data to prepare it for modeling. A logistic regression model is then trained to predict churn with high accuracy. Complementing the predictive model, Tableau dashboards provide interactive visualizations for exploratory data analysis and business insights. The ultimate goal is to create a customer-centric platform that integrates predictive analytics with design thinking principles to enable personalized retention strategies and improve customer lifetime value. Future development includes advanced segmentation, enhanced model deployment, and a user-friendly Streamlit app for real-time churn prediction and intervention.
+This project builds an end-to-end machine learning system to predict customer churn and deliver personalized retention strategies. Using comprehensive data analysis across demographics, financial behavior, and account patterns, the system identifies at-risk customers through four analytical notebooks. An interactive Streamlit application provides real-time churn predictions and matches customers to personas like "Stressed Sarah" for targeted retention solutions including personalized outreach, payment plans, and financial wellness resources. The platform combines predictive analytics with design thinking to proactively reduce churn and maximize customer lifetime value.
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)(CELIA)
 
@@ -75,6 +75,41 @@ This project aims to develop an end-to-end machine learning solution to predict 
 
 ---
 
+### 4. Project Status: In Progress
+
+\*Streamlit App - Interactive Churn Prediction & Solutions:\*\*
+
+- **Model Testing:** Real-time churn prediction using all relevant features
+- **Persona-Based Solutions:** Design thinking approach with customer personas
+- **Interactive Dashboard:** Input customer data and get personalized retention strategies
+
+## Streamlit App Features
+
+### Churn Prediction Interface
+
+``````python
+# Key input fields for prediction
+- Customer_Age (slider)
+- Income_Category (selectbox)
+- Card_Category (selectbox)
+- Months_Inactive_12_mon (slider)
+- Avg_Utilization_Ratio (slider)
+- Total_Trans_Amt (number_input)
+- Credit_Limit (number_input)
+Streamlit App Tabs:
+├── :dart: Churn Predictor (main prediction interface)
+├── :silhouettes: Customer Personas (design thinking profiles)
+├── :bulb: Retention Solutions (persona-based strategies)
+└── :bar_chart: Model Performance (accuracy metrics)
+### Sample output
+Prediction: 85% Churn Risk :warning:
+Customer Persona: "Stressed Sarah"
+Recommended Action:
+- Immediate personal call within 24 hours
+- Offer payment plan restructuring
+- Provide financial wellness resources
+- Consider credit limit review
+
 ## Data Sets Summary
 
 | Dataset Name             | Purpose                                  | Notes                                              |
@@ -87,8 +122,6 @@ This project aims to develop an end-to-end machine learning solution to predict 
 
 ## Next Steps
 
-- Build and deploy a **Streamlit app** integrating the trained logistic regression model for real-time churn prediction.
-- Include **design thinking** and user personas in the app for better user experience and alignment with business needs.
 - Use the cleaned and encoded datasets for further model experimentation or to build additional models.
 
 ---
@@ -115,19 +148,19 @@ This project aims to develop an end-to-end machine learning solution to predict 
 
 ## Data Analysis Methods Used
 
-- **Data Cleaning and Preprocessing:**  
+- **Data Cleaning and Preprocessing:**
   Implemented in the ETL pipeline notebook, including handling missing values, treating "Unknown" categories, and outlier capping using winsorization. This ensured that the data was consistent and reliable for both visualization and machine learning purposes.
 
-- **Feature Engineering and Encoding:**  
+- **Feature Engineering and Encoding:**
   Converted categorical variables into numeric formats in the encoded dataset to make it suitable for machine learning models like logistic regression.
 
-- **Logistic Regression Modeling:**  
+- **Logistic Regression Modeling:**
   Used logistic regression in the model training notebook to predict customer churn based on selected features. Logistic regression was chosen for its interpretability and efficiency on structured tabular data.
 
-- **Model Evaluation:**  
+- **Model Evaluation:**
   Assessed the model performance using accuracy, confusion matrix, and classification reports to understand precision, recall, and overall prediction quality.
 
-- **Prediction Generation:**  
+- **Prediction Generation:**
   Developed a churn prediction generator notebook to apply the trained model to new inputs and generate predictions interactively.
 
 ---
@@ -275,4 +308,4 @@ Team members section (roles)
 Font AwesomeFont Awesome
 Font Awesome
 The internet's icon library + toolkit. Used by millions of designers, devs, & content creators. Open-source. Always free. Always awesome.
-`````
+``````
