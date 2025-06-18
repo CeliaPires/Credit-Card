@@ -62,3 +62,16 @@ You will receive one of the following predictions:
 "The customer is likely to churn"
 
 "The customer is not likely to churn"
+
+🚧 Future Development Notice
+This Streamlit app is currently in an early stage and serves as a prototype for customer churn prediction using a logistic regression model. While the core data analysis and model training components have been completed, the Streamlit application is still under development.
+
+Some features may not work as intended, including model integration and full input handling. Due to time constraints, these parts have been pushed to the next stage of development.
+
+Further updates will include:
+
+Full integration of the trained model with the app interface
+
+Handling of all necessary input features expected by the model
+
+Improved user experience and error handling
