@@ -284,6 +284,8 @@ Through the three notebooks—ETL pipeline, churn prediction model training, and
 
 Data Source: The customer dataset used in this project is sourced from Kaggle.
 
+The image here was created using Canva
+
 
 
 ### Content(Angel,Kabira,Celia)
