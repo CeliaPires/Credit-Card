@@ -41,82 +41,159 @@ This project builds an end-to-end machine learning system to predict customer ch
 
 ### Analysis Plan
 
-**Notebook 1 - ETL Pipeline:**
+- All 23 columns for data cleaning and preprocessing
 
-- All 21 columns for data cleaning and preprocessing
+# Customer Churn Analysis Project
 
-**Notebook 2 - Descriptive Statistics:**
+## Overview
 
-- Demographics: `Customer_Age`, `Gender`, `Education_Level`, `Marital_Status`, `Income_Category`
-- Account Info: `Card_Category`, `Months_on_book`, `Credit_Limit`
+This project aims to analyze customer churn using a structured data science workflow, including data cleaning, feature engineering, model training, and deployment with an interactive prediction app. The goal is to build a reliable logistic regression model to predict customer churn and provide actionable insights.
 
-**Notebook 3 - Correlation Analysis:**
+---
 
-- Financial: `Credit_Limit`, `Total_Revolving_Bal`, `Avg_Utilization_Ratio`, `Total_Trans_Amt`
-- Behavioral: `Months_Inactive_12_mon`, `Contacts_Count_12_mon`, `Total_Trans_Ct`
+## Work Completed
 
-**Notebook 4 - Segmentation Analysis:**
+### 1. Data Preparation and ETL Pipeline
 
-- Key Segments: `Income_Category`, `Card_Category`, `Customer_Age`, `Total_Relationship_Count`
-- Risk Factors: `Avg_Utilization_Ratio`, `Months_Inactive_12_mon`, `Total_Revolving_Bal`
+- Created a comprehensive **ETL (Extract, Transform, Load) pipeline** in a dedicated Jupyter notebook.
+- Cleaned raw data by handling missing values, removing or capping outliers (using winsorization), and standardizing categories.
+- Generated multiple cleaned datasets for different purposes:
+  - **`cleaned_data.csv`** — Cleaned and capped dataset, with unknown categories retained for visualization and Tableau dashboards.
+  - **`cleaned_no_unknown.csv`** — Dataset with all “Unknown” categories removed, used for hypothesis-driven analysis.
+  - **`encoded_data.csv`** — Fully encoded dataset where categorical variables are converted to numeric formats suitable for machine learning.
 
-**Streamlit App - Interactive Churn Prediction & Solutions:**
+---
 
-- **Model Testing:** Real-time churn prediction using all relevant features
-- **Persona-Based Solutions:** Design thinking approach with customer personas
-- **Interactive Dashboard:** Input customer data and get personalized retention strategies
+### 2. Churn Prediction Model Training
 
-## Streamlit App Features
+- Developed a **logistic regression model** in a separate notebook.
+- Trained the model using carefully selected features, including:
+  - `Customer_Age`, `Income_Category`, `Card_Category`, `Months_Inactive_12_mon`, `Avg_Utilization_Ratio`, `Total_Trans_Amt`, `Credit_Limit`.
+- Evaluated the model with accuracy, confusion matrix, and classification report to ensure performance.
+- Saved the trained model for reuse and deployment.
 
-### Churn Prediction Interface
+---
 
-`````python
+### 3. Churn Prediction Generator
 
-# Key input fields for prediction
-- Customer_Age (slider)
-- Income_Category (selectbox)
-- Card_Category (selectbox)
-- Months_Inactive_12_mon (slider)
-- Avg_Utilization_Ratio (slider)
-- Total_Trans_Amt (number_input)
-- Credit_Limit (number_input)
+- Created a third notebook with a **customer churn prediction generator** — a script that loads the trained model and generates churn predictions on new input data.
+- Implemented user-friendly input forms (planned to integrate with Streamlit app) for end-users to input customer details and receive churn risk predictions.
 
-Streamlit App Tabs:
-├── :dart: Churn Predictor (main prediction interface)
-├── :silhouettes: Customer Personas (design thinking profiles)
-├── :bulb: Retention Solutions (persona-based strategies)
-└── :bar_chart: Model Performance (accuracy metrics)
+---
 
-### Sample output
-Prediction: 85% Churn Risk :warning:
-Customer Persona: "Stressed Sarah"
-Recommended Action:
-- Immediate personal call within 24 hours
-- Offer payment plan restructuring
-- Provide financial wellness resources
-- Consider credit limit review
+## Data Sets Summary
+
+| Dataset Name             | Purpose                                  | Notes                                              |
+| ------------------------ | ---------------------------------------- | -------------------------------------------------- |
+| `cleaned_data.csv`       | Visualization and Tableau dashboards     | Unknown categories retained, outliers capped.      |
+| `cleaned_no_unknown.csv` | Hypothesis testing and detailed analysis | Removed "Unknown" categories for cleaner insights. |
+| `encoded_data.csv`       | Machine learning model training          | All categorical data encoded to numeric values.    |
+
+---
+
+## Next Steps
+
+- Build and deploy a **Streamlit app** integrating the trained logistic regression model for real-time churn prediction.
+- Include **design thinking** and user personas in the app for better user experience and alignment with business needs.
+- Use the cleaned and encoded datasets for further model experimentation or to build additional models.
+
+---
 
 ## Business Requirements()(Celia)
+
 - Describe your business requirements
 
 ## Hypothesis and how to validate?()(Celia)
+
 - List here your project hypothesis(es) and how you envision validating it (them)
 
 ## Project Plan(Celia)
+
 - Outline the high-level steps taken for the analysis.
 - How was the data managed throughout the collection, processing, analysis and interpretation steps?
 - Why did you choose the research methodologies you used?
 
 ## The rationale to map the business requirements to the Data Visualisations(Kabira)
+
 - List your business requirements and a rationale to map them to the Data Visualisations
 
 ## Analysis techniques used(Angel)
-- List the data analysis methods used and explain limitations or alternative approaches.
-- How did you structure the data analysis techniques. Justify your response.
-- Did the data limit you, and did you use an alternative approach to meet these challenges?
-- How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+
+# Analysis Techniques Used (Angel)
+
+## Data Analysis Methods Used
+
+- **Data Cleaning and Preprocessing:**  
+  Implemented in the ETL pipeline notebook, including handling missing values, treating "Unknown" categories, and outlier capping using winsorization. This ensured that the data was consistent and reliable for both visualization and machine learning purposes.
+
+- **Feature Engineering and Encoding:**  
+  Converted categorical variables into numeric formats in the encoded dataset to make it suitable for machine learning models like logistic regression.
+
+- **Logistic Regression Modeling:**  
+  Used logistic regression in the model training notebook to predict customer churn based on selected features. Logistic regression was chosen for its interpretability and efficiency on structured tabular data.
+
+- **Model Evaluation:**  
+  Assessed the model performance using accuracy, confusion matrix, and classification reports to understand precision, recall, and overall prediction quality.
+
+- **Prediction Generation:**  
+  Developed a churn prediction generator notebook to apply the trained model to new inputs and generate predictions interactively.
+
+---
+
+## Limitations and Alternative Approaches
+
+- **Limitations:**
+
+  - Logistic regression assumes linearity between features and log-odds of the target, which may oversimplify complex relationships.
+  - Handling of unknown categories as a separate label may introduce noise; alternatively, these could be imputed or excluded.
+  - Outlier capping via winsorization is effective but might distort natural data variability.
+
+- **Alternative Approaches:**
+  - Exploring more complex models such as Random Forests, Gradient Boosting, or Neural Networks for potentially better predictive performance.
+  - Using imputation techniques or clustering to handle missing or unknown categorical data.
+  - Applying advanced feature engineering techniques like polynomial features or interaction terms.
+
+---
+
+## Structure and Justification of Data Analysis Techniques
+
+- The analysis was structured into three focused notebooks for clarity and modularity:
+
+  1. **ETL Pipeline:** For data cleaning and preparation, ensuring high-quality data as the foundation.
+  2. **Model Training:** To focus on machine learning model development and evaluation without distraction from data issues.
+  3. **Prediction Generator:** For applying the model to real-world scenarios and enabling interactive use.
+
+- This structure allows incremental development, easier debugging, and better collaboration or sharing with stakeholders.
+
+- Splitting datasets into `cleaned_data`, `cleaned_no_unknown`, and `encoded_data` allowed for tailored use cases such as visualization, hypothesis testing, and modeling, respectively.
+
+---
+
+## Data Constraints and Alternative Strategies
+
+- The presence of many "Unknown" categories limited the initial data quality, particularly for hypothesis testing. To address this, a dedicated dataset with these unknowns removed (`cleaned_no_unknown.csv`) was created for cleaner insights.
+
+- The dataset size and feature set limited model complexity; hence logistic regression was preferred for interpretability and speed.
+
+- When data constraints were encountered, alternative approaches such as data capping and selective removal were used to maintain balance between data quality and quantity.
+
+---
+
+## Use of Generative AI Tools
+
+- Utilized generative AI (like ChatGPT) for:
+
+  - **Ideation:** Brainstorming project structure, data cleaning strategies, and feature selection.
+  - **Design Thinking:** Crafting user personas and defining app features to align with end-user needs.
+  - **Code Optimization:** Receiving help with writing clean, commented, and efficient code snippets, especially for the logistic regression pipeline and Streamlit app.
+  - **Documentation:** Generating clear markdown summaries and explanations to improve project communication.
+
+- Generative AI sped up problem-solving, enhanced learning, and helped maintain focus on project goals.
+
+---
 
 ## Ethical considerations(Celia)
+
 - Were there any data privacy, bias or fairness issues with the data?
 - How did you overcome any legal or societal issues?
 
@@ -128,16 +205,19 @@ Recommended Action:
 - Explain how the dashboard was designed to communicate complex data insights to different audiences.
 
 ## Development Roadmap(Celia)
+
 - What challenges did you face, and what strategies were used to overcome these challenges?
 - What new skills or tools do you plan to learn next based on your project experience?
 
 ## Known Issues & Solutions(Angel,Celia,Kabira)
 
 ### Issue 1: PyArrow Dependency Installation Error
+
 **Problem:** Installation failed when running `pip install -r requirements.txt` with PyArrow dependency errors, even though PyArrow not directly listed in requirements.txt. The error occurred because PyArrow is an internal dependency of pandas and Streamlit packages, causing pip to automatically attempt installation during setup.
 **Root Cause:** PyArrow gets pulled in automatically as a transitive dependency from pandas and Streamlit, making it a "hidden dependency" that can cause installation issues on certain machine configurations.
 **Solution:**
-```bash
+
+`````bash
 pip install --only-binary=pyarrow pyarrow
 Then proceed with the normal requirements installation:
 Date Resolved: [16/06/2025]
