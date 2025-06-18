@@ -1,16 +1,18 @@
 # <span style="color: #FF6B9D;">ChurnTrailblazers</span>
 
-**<span style="color: #C77DFF;">Where Women meet Data mAgic</span>**
+**<span style="color: #C77DFF;">Where Women meet Data magic</span>**
 _<span style="color: #7209B7;">Breaking barriers, predicting churn, shaping future</span>_
 
 This project builds an end-to-end machine learning system to predict customer churn and deliver personalized retention strategies. Using comprehensive data analysis across demographics, financial behavior, and account patterns, the system identifies at-risk customers through four analytical notebooks. An interactive Streamlit application provides real-time churn predictions and matches customers to personas like "Stressed Sarah" for targeted retention solutions including personalized outreach, payment plans, and financial wellness resources. The platform combines predictive analytics with design thinking to proactively reduce churn and maximize customer lifetime value.
 
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)(CELIA)
+# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 ## Dataset Information
 
-**Source:** Kaggle Credit Card Customer Churn Dataset
+**Source:** [Kaggle Dataset](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers/data)
+
 **Total Columns:** 23 (analyzing all columns)
+
 **Target Variable:** Attrition_Flag (whether customer churned or not)
 
 ### Column Descriptions
@@ -39,15 +41,12 @@ This project builds an end-to-end machine learning system to predict customer ch
 | **Total_Ct_Chng_Q4_Q1**      | Change in transaction count from Q4 to Q1                    |
 | **Avg_Utilization_Ratio**    | How much of credit limit is being used                       |
 
-### Analysis Plan
 
-- All 23 columns for data cleaning and preprocessing
-
-## Business Requirements()(Celia)
+## Business Requirements
 
 - Develop analytical reports to identify customers at risk of churning and provide actionable insights to reduce churn rates. 
 
-## Hypothesis and how to validate?()(Celia)
+## Hypothesis and how to validate?
 
 - **Hypothesis 1:** Card Category affects churn probability
  Validated by a Chi-Square 
@@ -58,11 +57,8 @@ Validated by a t-test
 - **Hypothesis 3:** Average Utilization Ratio is significantly lower for churners
 Validated by a t-test
 
-## Project Plan(Celia)
+## Project Plan
 
-- Outline the high-level steps taken for the analysis.
-- How was the data managed throughout the collection, processing, analysis and interpretation steps?
-- Why did you choose the research methodologies you used?
 
 ## Mapping Business Requirements to Data Visualisation
 
@@ -83,7 +79,7 @@ Our Tableau dashboard provides a comprehensive analysis and visualisation of cre
 
 This dashboard was designed with the main users in mind (bank managers, analysts, customer service etc.) to clearly articulate the insights from the main issue, which is customer churn. The dashboard includes a range of features such as filters to allow for user customisation and clearly labelled visualisations to ensure inclusivity and ease of use for both technical and non-technical audiences. 
 
-[Tableau Link] (https://public.tableau.com/views/CreditCardChurnersDashboard/Dashboard3?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[Tableau Link](https://public.tableau.com/views/CreditCardChurnersDashboard/Dashboard3?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 
 ## Tableau Dashboard Pages
@@ -93,11 +89,15 @@ This dashboard was designed with the main users in mind (bank managers, analysts
 ![**Bar Chart**](<Screenshot 2025-06-18 at 12.08.13 (2).png>)
 
 **Filters**
- (-) Available Credit (range slider)
- (-) Products Count (range slider)
+
+ * Available Credit (range slider)
+
+ * Products Count (range slider)
+
 
  **Legend**
- (-) Colour Legend - Attrition Flag
+
+ * Colour Legend - Attrition Flag
 
 
  ### Card Type vs. Avg Transaction Count
@@ -219,7 +219,7 @@ In conclusion, the analysis reveals that customer churn among credit card holder
 - Data Source: The customer dataset used in this project is sourced from Kaggle.
 - Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-- Youtube videos to aid in creating visualisations in Tableau [Pie Chart Tutorial] (https://www.youtube.com/watch?v=mWZL2ae1l30) [Bar Chart Tutorial] (https://www.youtube.com/watch?v=wnfbneCCbxA)
+- Youtube videos to aid in creating visualisations in Tableau [Pie Chart Tutorial](https://www.youtube.com/watch?v=mWZL2ae1l30) [Bar Chart Tutorial](https://www.youtube.com/watch?v=wnfbneCCbxA)
 - Microsoft CoPilot was used to enhance visualisations and code creation for the calculated fields in Tableau.
 - Content from the LMS was used for dashboard creation in Tableau.
 
