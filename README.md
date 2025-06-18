@@ -120,12 +120,111 @@ Recommended Action:
 - Were there any data privacy, bias or fairness issues with the data?
 - How did you overcome any legal or societal issues?
 
-## Dashboard Design(Kabira's SEction)
+## Dashboard Design
 
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-- Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
-- How were data insights communicated to technical and non-technical audiences?
-- Explain how the dashboard was designed to communicate complex data insights to different audiences.
+Our Tableau dashboard provides a comprehensive analysis and visualisation of credit card customer churn. Factors such as card type, credit limit, account utilisation, transaction activity, account inactivity, and customer engagement are analysed to determine the likelihood of customer attrition, enabling deeper understanding of the drivers behind churn. 
+
+This dashboard was designed with the main users in mind (bank managers, analysts, customer service etc.) to clearly articulate in the insghts from the main issue, which is customer churn. The dashboard includes a range of features such as filters to allow for user customisation and clearly labelled visualisations to ensure inclusivity and ease of use for both technical and non-technical audiences. 
+
+## Tableau Dashboard Pages
+
+### Churned Status vs. Credit Limit
+
+**Visualisation**: Bar Chart
+
+**Filters**
+ (-) Available Credit (range slider)
+ (-) Products Count (range slider)
+
+ **Legend**
+ (-) Colour Legend - Attrition Flag
+
+
+ ### Card Type vs. Avg Transaction Count
+
+**Visualisation**: Line Chart
+
+**Filters**
+ (-) Available Credit (range slider)
+ (-) Products Count (range slider)
+ (-) Avg. Total Trans Ct (range slider)
+
+ **Legend**
+ (-) Colour Legend - Card Category
+
+ **Labels**
+ (-) Attrition Flag
+
+
+ ### Card Type vs. Avg Months of Inactivity (per 12 months)
+
+**Visualisation**: Line Chart
+
+**Filters**
+ (-) Available Credit (range slider)
+ (-) Products Count (range slider)
+ (-) Card Category (checkboxes: Blue, Gold, Platinum, Silver)
+
+ **Legend**
+ (-) Colour Legend - Card Category
+
+ **Labels**
+ (-) Attrition Flag
+
+
+### Credit Limit vs. Churn Probability
+
+**Visualisation**: Scatter Plot
+
+**Filters**
+ (-) Available Credit (range slider)
+ (-) Products Count (range slider)
+
+ **Legend**
+ (-) Colour Legend - Attrition Flag
+ (-) Size Legend - Total Revolving Balance
+
+ **Tooltip**
+ (-) Customer ID, Credit Limit, NB Churn Probability etc.
+
+
+### Avg Utilisation Ratio vs. Churn Probability
+
+**Visualisation**: Scatter Plot
+
+**Filters**
+ (-) Available Credit (range slider)
+ (-) Products Count (range slider)
+
+ **Legend**
+ (-) Colour Legend - Attrition Flag
+ (-) Size Legend - Total Revolving Balance
+
+
+### Product Count vs. Churn Status
+
+**Visualisation**: Bar Chart 
+
+**Filters**
+ (-) Available Credit (range slider)
+ (-) Products Count (range slider)
+
+ **Legend**
+ (-) Colour Legend - Attrition Flag
+
+ 
+ ### Contacts Count Per 12 Months
+
+**Visualisation**: Stacked Bar Chart 
+
+**Filters**
+ (-) Available Credit (range slider)
+ (-) Products Count (range slider)
+
+ **Legend**
+ (-) Colour Legend - Card Category
+ 
+
 
 ## Development Roadmap(Celia)
 - What challenges did you face, and what strategies were used to overcome these challenges?
