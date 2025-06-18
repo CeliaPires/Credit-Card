@@ -3,7 +3,7 @@ import numpy as np
 import joblib
 
 # Load your saved model
-model = joblib.load('/Users/ebenezerrajakumar/Credit-Card/Credit-Card-1/models/logistic_churn_model.pkl')
+model = joblib.load('models/logistic_churn_model.pkl')
 
 st.title("Customer Churn Prediction App")
 
