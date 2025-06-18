@@ -5,7 +5,7 @@ _<span style="color: #7209B7;">Breaking barriers, predicting churn, shaping futu
 
 This project builds an end-to-end machine learning system to predict customer churn and deliver personalized retention strategies. Using comprehensive data analysis across demographics, financial behavior, and account patterns, the system identifies at-risk customers through four analytical notebooks. An interactive Streamlit application provides real-time churn predictions and matches customers to personas like "Stressed Sarah" for targeted retention solutions including personalized outreach, payment plans, and financial wellness resources. The platform combines predictive analytics with design thinking to proactively reduce churn and maximize customer lifetime value.
 
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)(CELIA)
+<img src="data/images/3_TrailBlazers.PNG" width="800" height="300"/>
 
 ## Dataset Information
 
