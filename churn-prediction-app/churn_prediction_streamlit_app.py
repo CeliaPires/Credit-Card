@@ -30,3 +30,7 @@ Avg_Utilization_Ratio = st.slider("Average Credit Utilization Ratio", min_value=
 Total_Trans_Amt = st.number_input("Total Transaction Amount", min_value=0, value=1000)
 
 Credit_Limit = st.number_input("Credit Limit", min_value=0, value=10000)
+
+if st.button("Predict Churn"):
+    # Placeholder for the model prediction logic
+    st.write("🔮 Prediction functionality coming soon!")
