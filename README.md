@@ -196,6 +196,17 @@ This dashboard was designed with the main users in mind (bank managers, analysts
 
 ## Development Roadmap
 
+**What challenges did you face, and what strategies were used to overcome these challenges?**
+
+**What new skills or tools do you plan to learn next based on your project experience?**
+
+I need to practice more before the capstone project to ensure that next time I have a joyful experience. I also need to supplement my knowledge and understanding of data visualisation in Power BI. 
+
+I faced some challenges in cloning my project in VS Code. This time I used a different approach to hackathon 1 and unfortunately made a mistake in the process. I have made a record of what I did wrong and will endeavor to not repeat again. 
+
+The second challenge faced is around the overall project management: the pulling of requests and overseeing changes to the main branch to ensure that there were no conflicts. I have now documented the steps in a sequential manner. The next group hackathon should be easier. 
+
+
 # Main Data Analysis Libraries
 ## Core Data Processing
 - pandas
@@ -222,7 +233,7 @@ In conclusion, the analysis reveals that customer churn among credit card holder
 - Youtube videos to aid in creating visualisations in Tableau [Pie Chart Tutorial] (https://www.youtube.com/watch?v=mWZL2ae1l30) [Bar Chart Tutorial] (https://www.youtube.com/watch?v=wnfbneCCbxA)
 - Microsoft CoPilot was used to enhance visualisations and code creation for the calculated fields in Tableau.
 - Content from the LMS was used for dashboard creation in Tableau.
-
+- Chatgpt for coding (hypothesis testing) and general troubleshooting.
 
 
 ### Content
@@ -234,6 +245,9 @@ In conclusion, the analysis reveals that customer churn among credit card holder
 
 ## Acknowledgements 
 
+I would like to say a big thank you to Mark and Sheila for stepping in and helping me with my technical issues.
+
+Finally I would like to thank my team (Angel and Kabira) for their work, attitude and contribution to the project.
 
 ## ChurnTrailblazers Team! 
 Team members section
