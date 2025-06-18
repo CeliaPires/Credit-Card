@@ -3,14 +3,14 @@
 **<span style="color: #C77DFF;">Where Women meet Data mAgic</span>**
 _<span style="color: #7209B7;">Breaking barriers, predicting churn, shaping future</span>_
 
-This project builds an end-to-end machine learning system to predict customer churn and deliver personalized retention strategies. Using comprehensive data analysis across demographics, financial behavior, and account patterns, the system identifies at-risk customers through four analytical notebooks covering ETL, descriptive statistics, correlations, and segmentation. An interactive Streamlit application provides real-time churn predictions and matches customers to personas like "Stressed Sarah" for targeted retention solutions including personalized outreach, payment plans, and financial wellness resources. The platform combines predictive analytics with design thinking to proactively reduce churn and maximize customer lifetime value.
+This project aims to develop an end-to-end machine learning solution to predict customer churn in the financial services sector. By leveraging historical customer data—including demographics, transaction behavior, and credit usage—the system identifies customers who are at risk of leaving. The project begins with a robust ETL pipeline that cleans, preprocesses, and encodes the data to prepare it for modeling. A logistic regression model is then trained to predict churn with high accuracy. Complementing the predictive model, Tableau dashboards provide interactive visualizations for exploratory data analysis and business insights. The ultimate goal is to create a customer-centric platform that integrates predictive analytics with design thinking principles to enable personalized retention strategies and improve customer lifetime value. Future development includes advanced segmentation, enhanced model deployment, and a user-friendly Streamlit app for real-time churn prediction and intervention.
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)(CELIA)
 
 ## Dataset Information
 
 **Source:** Kaggle Credit Card Customer Churn Dataset
-**Total Columns:** 23 (analyzing 21 columns)
+**Total Columns:** 23 (analyzing all columns)
 **Target Variable:** Attrition_Flag (whether customer churned or not)
 
 ### Column Descriptions
@@ -44,12 +44,6 @@ This project builds an end-to-end machine learning system to predict customer ch
 - All 23 columns for data cleaning and preprocessing
 
 # Customer Churn Analysis Project
-
-## Overview
-
-This project aims to analyze customer churn using a structured data science workflow, including data cleaning, feature engineering, model training, and deployment with an interactive prediction app. The goal is to build a reliable logistic regression model to predict customer churn and provide actionable insights.
-
----
 
 ## Work Completed
 
@@ -116,8 +110,6 @@ This project aims to analyze customer churn using a structured data science work
 ## The rationale to map the business requirements to the Data Visualisations(Kabira)
 
 - List your business requirements and a rationale to map them to the Data Visualisations
-
-## Analysis techniques used(Angel)
 
 # Analysis Techniques Used (Angel)
 
@@ -250,9 +242,16 @@ Key Learning: Hidden/transitive dependencies can affect package installation eve
 - streamlit
 
 ## Conclusions (Celia,Angel,Kabira)
-Key findings
+
+Through the three notebooks—ETL pipeline, churn prediction model training, and churn prediction generator—I successfully prepared and processed the customer data, developed a reliable logistic regression model to predict churn, and created a functional churn prediction tool. The ETL pipeline ensured clean, well-structured data suitable for modeling by handling missing values, encoding categorical features, and capping outliers. The logistic regression model demonstrated solid performance with a good balance of accuracy and interpretability, identifying key factors influencing customer churn. The churn prediction generator notebook integrates the model to provide churn likelihood for new customers. These results set a strong foundation for building interactive dashboards and deployment apps, enabling actionable insights to reduce churn and improve customer retention strategies.
+
+
 
 ## Credits(Celia,Angel,Kabira)
+
+Data Source: The customer dataset used in this project is sourced from Kaggle.
+
+
 
 * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
 * You can break the credits section up into Content and Media, depending on what you have included in your project.
