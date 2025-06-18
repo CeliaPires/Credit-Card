@@ -286,9 +286,6 @@ Data Source: The customer dataset used in this project is sourced from Kaggle.
 
 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
-* You can break the credits section up into Content and Media, depending on what you have included in your project.
-
 ### Content(Angel,Kabira,Celia)
 - The text for the Home page was taken from Wikipedia Article A
 - Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
@@ -299,11 +296,28 @@ Data Source: The customer dataset used in this project is sourced from Kaggle.
 - The images used for the gallery page were taken from this other open-source site
 
 ## Acknowledgements (Angel, Celia, Kabira)
-* Thank the people who provided support through this project.
+* Thank all  the people who provided support through this project.
 
 ## ChurnTrailblazers Team! (Celia,Angel,Kabira)
-Team members section (roles)
-```` (edited)
+Team members section
+
+Angelnesakumari Jayakumar:As a Data Analyst, I led the end-to-end preparation of a machine learning pipeline focused on predicting customer churn. My responsibilities included:
+
+Data Cleaning & Preprocessing: Cleaned and transformed raw customer data to ensure quality and consistency, handling missing values and removing unknowns.
+
+ETL Pipeline Development: Designed and executed an ETL (Extract, Transform, Load) process to structure the dataset for analysis and modeling.
+
+Feature Engineering & Encoding: Selected relevant features for churn prediction and encoded categorical variables to prepare the data for machine learning.
+
+Model Training: Trained a Logistic Regression model using key features such as Customer_Age, Income_Category, Card_Category, Credit_Limit, and transaction data.
+
+Exploratory Data Analysis (EDA): Conducted visual and statistical analysis using Tableau to identify trends, segment behaviors, and understand churn patterns.
+
+Streamlit App Prototype: Initiated a Streamlit app interface for user input and prediction, with further integration planned in the next development phase.
+
+This work demonstrates my ability to apply analytical thinking, data preprocessing, and model development to solve real-world business problems using a structured and user-centered approach.
+
+
 
 Font AwesomeFont Awesome
 Font Awesome
